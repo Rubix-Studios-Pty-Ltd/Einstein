@@ -1,20 +1,20 @@
 {
+	"evmVersion": "paris",
 	"optimizer": {
-	  	"evmVersion": "paris",
-		"enabled": false,
-		"runs": 200
+	  "enabled": false,
+	  "runs": 200
 	},
 	"outputSelection": {
-		"*": {
-			"*": [
-				"evm.bytecode",
-				"evm.deployedBytecode",
-				"devdoc",
-				"userdoc",
-				"metadata",
-				"abi"
-			]
-		}
+	  "*": {
+		"*": [
+		  "evm.bytecode",
+		  "evm.deployedBytecode",
+		  "devdoc",
+		  "userdoc",
+		  "metadata",
+		  "abi"
+		]
+	  }
 	},
 	"libraries": {}
-}
+  }

@@ -1,4 +1,4 @@
-# Einstein Token on Cronos
+# Einstein on Cronos
 
 This project is a public repository of Einstein ER20  Smart Contract deloyed on the Cronos chain.
 

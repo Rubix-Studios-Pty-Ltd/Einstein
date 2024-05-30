@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Einstein is ERC20, Ownable {
-    uint256 public constant totalEIN = 500000000000000 * (10 ** 18);
-    uint256 public constant saleEIN = totalEIN / 2; 
+    uint256 public immutable totalEIN = 500000000000000 * (10 ** 18);
+    uint256 public immutable saleEIN = totalEIN / 2; 
     uint256 public CROcontributed = 0;
     mapping(address => uint256) public CROcontributions;
 
@@ -39,7 +39,8 @@ contract Einstein is ERC20, Ownable {
     }
 
     function ein() public payable {
-        if (block.timestamp < salestarttimestamp || block.timestamp > saleendtimestamp) revert salenotstarted();
+        if (block.timestamp > saleendtimestamp) revert salealreadyended();
+        if (block.timestamp < salestarttimestamp) revert salenotstarted();
         CROcontributions[msg.sender] += msg.value;
         CROcontributed += msg.value;
 

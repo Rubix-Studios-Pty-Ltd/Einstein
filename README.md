@@ -8,10 +8,12 @@ This project is a public repository of Einstein ER20 Smart Contract deployable o
 This project allows for presale and claimable presale.
 
 **Initial minted amount:** totalEIN = 500000000000000 * (10 ** 18)
+
 **Presale supply ratio:** saleEIN = totalEIN / 2
+
 **Token name:** "Einstein", "EIN"
 
-Updates includes a slight change to withdrawCRO display errors. When an error in withdraw occurs an error function can be excuted to display the related error message.
+The updates include a slight change to withdrawCRO's display errors. When an error in withdrawal occurs, an error function can be executed to display the related error message.
 
 ## Information
 

@@ -20,7 +20,8 @@ contract Einstein is ERC20, Ownable {
     error nocontribution();
     error invalidtimestamps();
     error recipientsamountsmismatch();
-
+    error withdrawfailed();
+    
     event contributionupdated(address indexed contributor, uint256 amountcontributed, uint256 newCROcontributed);
 
     constructor() ERC20("Einstein", "EIN") Ownable(msg.sender) {
@@ -59,7 +60,7 @@ contract Einstein is ERC20, Ownable {
 
     function withdrawCRO(uint256 amount, address receiver) public onlyOwner {
         (bool ok, ) = payable(receiver).call{value: amount}("");
-        if (!ok) revert nocontribution();
+        if (!ok) revert withdrawfailed();
     }
 
     function einstein(address[] memory recipients, uint256[] memory amounts) public onlyOwner {

@@ -23,6 +23,6 @@ Updates includes a slight change to withdrawCRO display errors. When an error in
 
 ### Development
 
-**Developer:** [Rubix Studios](https://www.rubixstudios.com.au)
+**Developer:** [Rubix Studios](https://rubixstudios.com.au)
 
 **Innovation:** [XRL](https://xrl.au)
